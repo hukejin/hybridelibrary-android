@@ -240,7 +240,7 @@
 </table>
 
 ### 详细用法   
-1. 创建activity，继承cn.com.hesc.library.BaseActivity
+1. 创建activity，继承cn.com.hesc.library.HybrideBaseActivity
 2. 通过layout或者代码引入cn.com.hesc.library.ExtendsWebView
 3. 对ExtendsWebView进行相关设置，以下代码可以直接拷贝使用
 ```
