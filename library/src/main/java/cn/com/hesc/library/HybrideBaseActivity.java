@@ -8,7 +8,7 @@ import org.json.JSONObject;
 /**
  * 定义实现原生能力的基类
  */
-public abstract class BaseActivity extends Activity implements ActionListener{
+public abstract class HybrideBaseActivity extends Activity implements ActionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
