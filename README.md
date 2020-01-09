@@ -237,8 +237,8 @@
     <td>openHrefUrl</td>
     <td>无</td>
 </tr>
-</table>   
----
+</table>
+
 ### 详细用法   
 1. 创建activity，继承cn.com.hesc.library.BaseActivity
 2. 通过layout或者代码引入cn.com.hesc.library.ExtendsWebView
