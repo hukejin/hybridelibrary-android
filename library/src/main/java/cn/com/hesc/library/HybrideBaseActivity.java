@@ -3,12 +3,14 @@ package cn.com.hesc.library;
 import android.app.Activity;
 import android.os.Bundle;
 
+import androidx.fragment.app.FragmentActivity;
+
 import org.json.JSONObject;
 
 /**
  * 定义实现原生能力的基类
  */
-public abstract class HybrideBaseActivity extends Activity implements ActionListener{
+public abstract class HybrideBaseActivity extends FragmentActivity implements ActionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
