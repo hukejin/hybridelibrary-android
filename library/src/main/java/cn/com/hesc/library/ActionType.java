@@ -47,5 +47,5 @@ public enum ActionType {
     PREVIEWPICTURES,/** 预览图片 */
     CALL,/** 拨打电话 */
     SMG,/** 发送信息 */
-
+    NATIVE_METHOD/**调用原生自定义功能**/
 }

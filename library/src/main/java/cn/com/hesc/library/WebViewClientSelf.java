@@ -1,14 +1,10 @@
 package cn.com.hesc.library;
 
 import android.content.Context;
-import android.os.Build;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import androidx.annotation.RequiresApi;
-
 import javax.net.ssl.HttpsURLConnection;
 
 /**
@@ -37,7 +33,7 @@ public class WebViewClientSelf extends WebViewClient {
         mHttpStatusListener = httpStatusListener;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
     @Override
     public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
         if(null != mHttpStatusListener){

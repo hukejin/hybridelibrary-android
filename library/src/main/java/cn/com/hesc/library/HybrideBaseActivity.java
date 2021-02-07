@@ -150,6 +150,11 @@ public abstract class HybrideBaseActivity extends FragmentActivity implements Ac
                 case DEVICE_OPENWEB:
                     openHrefUrl(messageHandler,params);
                     break;
+                case NATIVE_METHOD:
+                    nativeMethod(messageHandler,params);
+                    break;
+                default:
+                    break;
 
             }
         }catch (Exception e){
@@ -203,4 +208,5 @@ public abstract class HybrideBaseActivity extends FragmentActivity implements Ac
     protected abstract void stopAudio(MessageHandler messageHandler, String params);
     protected abstract void playAudioSubscribe(MessageHandler messageHandler, String params);
     protected abstract void openHrefUrl(MessageHandler messageHandler, String params);
+    protected abstract void nativeMethod(MessageHandler messageHandler,String params);
 }

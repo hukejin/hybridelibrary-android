@@ -2,9 +2,6 @@ package cn.com.hesc.library;
 
 import android.webkit.JavascriptInterface;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import static cn.com.hesc.library.ActionType.CALL;
 import static cn.com.hesc.library.ActionType.CAPTURE;
 import static cn.com.hesc.library.ActionType.DATE_DATE;
@@ -35,6 +32,7 @@ import static cn.com.hesc.library.ActionType.DIALOG_MULTIPLE;
 import static cn.com.hesc.library.ActionType.DIALOG_SIGNAL;
 import static cn.com.hesc.library.ActionType.DIALOG_TOAST;
 import static cn.com.hesc.library.ActionType.DOWNLOADFILE;
+import static cn.com.hesc.library.ActionType.NATIVE_METHOD;
 import static cn.com.hesc.library.ActionType.NAVIGATION_BAR_BACKGROUND;
 import static cn.com.hesc.library.ActionType.NAVIGATION_BAR_CLOSE;
 import static cn.com.hesc.library.ActionType.NAVIGATION_BAR_GOBACK;
@@ -66,7 +64,7 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void handler(@NonNull String method, @Nullable String params){
+    public void handler(String method, String params){
         switch (method) {
             case "soft.version":
                 actionListener.onAction(VERSION, params);
@@ -193,6 +191,9 @@ public class JavaScriptInterface {
                 break;
             case "biz.telephone.smg":
                 actionListener.onAction(SMG, params);
+                break;
+            case "biz.native.method":
+                actionListener.onAction(NATIVE_METHOD, params);
                 break;
         }
     }
